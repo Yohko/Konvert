@@ -1,0 +1,3 @@
+{TODO : bei CFS und CIS muss irgenwie die Anregungsenergie auf die X-Achse und die kin. Energie fest (CFS) bzw. ansteigend (CIS) sein. Außerdem sollte ich irgenwie SetEBind-Knopf im WorkSheet deaktivieren ! Das geht mit dem LabTalk-Kommando WksName!Status.Enable=0 (Status heißt meine Eingabebox)}
+{DONE : Das Erzeugen der Spalten für die ADC-Kanäle muss noch in TExperimentORIGINCall (??) implementiert werden}
+{DONE : Ich muss in TRegionORIGINCall.Free noch das Löschen der ADCChannel-Liste implementieren}

@@ -1,0 +1,347 @@
+object HauptFenster: THauptFenster
+  Left = 16
+  Top = 29
+  Width = 621
+  Height = 338
+  Caption = 'Konvert   -   Converting XPS ---> ORIGIN'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  Icon.Data = {
+    000001000200101010000000000028010000260000002020100000000000E802
+    00004E0100002800000010000000200000000100040000000000C00000000000
+    0000000000000000000000000000000000000000800000800000008080008000
+    00008000800080800000C0C0C000808080000000FF0000FF000000FFFF00FF00
+    0000FF00FF00FFFF0000FFFFFF00F8FFF888888FFFFFF8F88FFFFFF88888F88F
+    FFFFFFFF88FFF8888FFFFFFF8F8FF8FF999FFF9F8F8F8FFFF9FFF9FFFFF88FFF
+    F9FF9FFFFFF88FFFF999FFFFFFF88FFFFF99FFFFFFF88FFFFF9F9FFFFFF88FFF
+    FF9FF9FFFFF8F8F8F999FF9FFF8FF8F8FFFFFFF8888FFF88FFFFFFFFF88F8888
+    8FFFFFF88F8FFFFFF888888FFF8F000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000280000002000000040000000010004000000
+    0000800200000000000000000000000000000000000000000000000080000080
+    000000808000800000008000800080800000C0C0C000808080000000FF0000FF
+    000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFF8FFFFFFF88888888
+    FFFFFFFFFFFFFFFF8FFFF888FFFFFFFF888FFFFFFFFFFFFF8FF88FFFFFFFFFFF
+    FFF88FFFFFFFFFF8FF8FFFFFFFFFFFFFFFFFF8888FFFFFF8F8FFFFFFFFFFFFFF
+    FFFFF88FF888FFF88FF888FFFFFFFFFFFFFFF8F8FFFFFFF8888FFFFFFFFFFFFF
+    FFFFF8FF8FFFFF8FFFFFFFFFFFFFFFFFFFFFFF8FF8FFFF8FFFFF999999FFFFF9
+    99FFFF8FF8FFF8FFFFFFFF99FFFFFF999FFFFF8FFF8FF8FFFFFFFF99FFFFF999
+    FFFFFFFFFF8FF8FFFFFFFF99FFFFF99FFFFFFFFFFF8F8FFFFFFFFF999FFF99FF
+    FFFFFFFFFFF88FFFFFFFFFF99FF99FFFFFFFFFFFFFF88FFFFFFFFFF99F99FFFF
+    FFFFFFFFFFF88FFFFFFFFFF9999FFFFFFFFFFFFFFFF88FFFFFFFFFF99F9FFFFF
+    FFFFFFFFFFF88FFFFFFFFFF99FF9FFFFFFFFFFFFFFF88FFFFFFFFFF99FFF9FFF
+    FFFFFFFFFFF88FFFFFFFFFFF99FFF9FFFFFFFFFFFFF8F8FFFFFFFFFF99FFFF9F
+    FFFFFFFFFF8FF8FFFFFFFFFF99FFFFF9FFFFFFFFFF8FF8FFF8FFFFFF99FFFFFF
+    9FFFFFFFFF8FFF8FF8FFFF999999FFFF999FFFFFF8FFFF8FF8FFFFFFFFFFFFFF
+    FFFFFFFFF8FFFFF8FF8FFFFFFFFFFFFFFFFF88888FFFFFFF8F8FFFFFFFFFFFFF
+    FFFFFFF88FFF888FF88FFFFFFFFFFFFFFFFFFF8F8FFFFFF8888FFFFFFFFFFFFF
+    FFFFF8FF8FFFFFFFFFF88FFFFFFFFFFFFFF88FF8FFFFFFFFFFFFF888FFFFFFFF
+    888FFFF8FFFFFFFFFFFFFFFF88888888FFFFFFF8FFFF00000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000}
+  OldCreateOrder = True
+  Scaled = False
+  PixelsPerInch = 96
+  TextHeight = 16
+  object Label1: TLabel
+    Left = 4
+    Top = 9
+    Width = 69
+    Height = 16
+    Caption = 'Import-File :'
+  end
+  object Label2: TLabel
+    Left = 4
+    Top = 68
+    Width = 255
+    Height = 16
+    Caption = 'Path and (fixed) Name of the Export-File(s) :'
+  end
+  object CB_ExtraSpalte: TCheckBox
+    Left = 12
+    Top = 168
+    Width = 169
+    Height = 17
+    Caption = 'create extra data column'
+    TabOrder = 11
+    OnClick = CB_ExtraSpalte_Click
+    OnKeyDown = cb_ExtraSpalte_KeyDown
+  end
+  object IL_ImportName: TEdit
+    Left = 4
+    Top = 32
+    Width = 509
+    Height = 24
+    TabOrder = 0
+  end
+  object BT_ImportName: TButton
+    Left = 528
+    Top = 32
+    Width = 78
+    Height = 25
+    Caption = 'Name ...'
+    TabOrder = 1
+    OnClick = BT_ImportNameClick
+  end
+  object IL_ExportName: TEdit
+    Left = 4
+    Top = 89
+    Width = 509
+    Height = 24
+    TabOrder = 2
+  end
+  object BT_ExportName: TButton
+    Left = 528
+    Top = 89
+    Width = 78
+    Height = 24
+    Caption = 'Name ...'
+    TabOrder = 3
+    OnClick = BT_ExportNameClick
+  end
+  object BT_Konvertieren: TButton
+    Left = 408
+    Top = 164
+    Width = 197
+    Height = 28
+    Caption = 'Execute Conversion'
+    Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = BT_KonvertierenClick
+  end
+  object BT_SaveIni: TButton
+    Left = 392
+    Top = 263
+    Width = 89
+    Height = 25
+    Caption = 'Save INI-File'
+    TabOrder = 5
+    OnClick = BT_SaveIniClick
+  end
+  object BT_Exit: TButton
+    Left = 488
+    Top = 263
+    Width = 117
+    Height = 25
+    Caption = 'Exit'
+    TabOrder = 6
+    OnClick = BT_ExitClick
+  end
+  object CB_DivScans: TCheckBox
+    Left = 12
+    Top = 210
+    Width = 231
+    Height = 19
+    Caption = 'Divide Countrate by Nr. of Scans'
+    Checked = True
+    State = cbChecked
+    TabOrder = 7
+  end
+  object BT_Alles: TButton
+    Left = 408
+    Top = 199
+    Width = 197
+    Height = 25
+    Caption = 'Converting whole Directory'
+    TabOrder = 8
+    OnClick = BT_AllesClick
+  end
+  object CB_Origin: TCheckBox
+    Left = 12
+    Top = 189
+    Width = 240
+    Height = 21
+    Caption = 'Origin-Macro instead of Import Files'
+    TabOrder = 9
+    OnKeyDown = cb_Origin_KeyDown
+  end
+  object CB_DivLifeTime: TCheckBox
+    Left = 12
+    Top = 231
+    Width = 228
+    Height = 21
+    Caption = 'Divide Countrate by LifeTime'
+    Checked = True
+    State = cbChecked
+    TabOrder = 10
+  end
+  object BT_Options: TButton
+    Left = 408
+    Top = 232
+    Width = 195
+    Height = 25
+    Caption = 'Konvert-Options ...'
+    TabOrder = 12
+    OnClick = BT_OptionsClick
+  end
+  object CB_NormiereExtraSpalte: TCheckBox
+    Left = 256
+    Top = 168
+    Width = 117
+    Height = 17
+    Caption = 'normalise this'
+    Enabled = False
+    TabOrder = 13
+  end
+  object Memo1: TMemo
+    Left = 16
+    Top = 256
+    Width = 353
+    Height = 33
+    Cursor = crArrow
+    Alignment = taCenter
+    Color = clMenu
+    Ctl3D = True
+    DragCursor = crArrow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Font.Style = []
+    HideSelection = False
+    Lines.Strings = (
+      'Konvert   -   Version 4.5   by Patrick Hoffmann, Cottbus'
+      'modified by Matthias Richter'
+      'Version 2014-02-07'
+      'Converting Spectra (Omicron) and Phoibos (Specs) into ORIGIN'#174
+      'eMail: Patrick.Hoffmann@T-Online.de'
+      'eMail: Patrick.Hoffmann@TU-Cottbus.de'
+      'eMail: Matthias.H.Richter@gmail.com'
+      ''
+      'Version Info:'
+      ''
+      'Version 4.3.2 :'
+      '- Generation of Names and Labels of the WorkSheets improved'
+      '- Comments to the Regions now also included in Origin WorkSheets'
+      ''
+      'Version 4.3.1 :'
+      '- Import of DetectorVoltageScan implemented'
+      '- now up to 100 Detectors allowed'
+      ''
+      'Version 4.3.0 :'
+      '- Problems with file names solved, which are too long for Origin'
+      '  WorkSheet names'
+      '- SetUp program added'
+      '- removed use of Konvert.TXT'
+      ''
+      'Version 4.2.1 Beta :'
+      
+        '- Import-Problems solved due to additional data inside the XML f' +
+        'ile '
+      '(e.g. from operations like Peak Location).'
+      ''
+      'Version 4.2.0 Beta :'
+      '- Include import of ADC-Channels, if saved in XML file'
+      '- Support for CIS and CFS scan mode (Specs-XML import) included.'
+      '- X-axis column rename depending on scan mode'
+      ''
+      'Version 4.1.1 :'
+      
+        '- Interpolation improved: Interpolation now gives the same data ' +
+        'like '
+      '"Interpolate" in SpecsLab software (Update .35)'
+      ''
+      'Version 4.1.0 :'
+      
+        '- Interpolation added: Linear interpolation of the countrate for' +
+        ' a '
+      'data point on the measurrement grid between two neighbouring '
+      'countrates.'
+      
+        '- Single Channeltron Export: Export of countrates for each singl' +
+        'e '
+      'Channeltron as additional column now possible.'
+      ''
+      'Version 4.0.1:'
+      
+        '- Bug removed: If an asymmetric number of additional points has ' +
+        'to '
+      'be measured (e.g 3 points before but only 2 points after the '
+      'spectrum due to asymmetric detector shifts) the calculation of '
+      'StartOfsett was wrong.'
+      
+        '- Origin-WorkSheet-Label improved: If Lable was to long it was c' +
+        'ut at '
+      'the end. Therefore the name of the region was not readable. Now '
+      'inteligent shortening of the label was introduced.'
+      '- Bug removed: If empty regions were exportet into XY-file by '
+      'SpecsLab Konvert was not excepting the XY-file as valid. Now '
+      'Konvert is tolerating empty regions also in XY-files.'
+      ''
+      'Version 4.0beta:'
+      '- Import of SPECS XML-files added'
+      ''
+      'Version 3.1:'
+      '- Import of SPECS XY-files added')
+    ParentCtl3D = False
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 14
+  end
+  object CB_EnableMovingSizing: TCheckBox
+    Left = 256
+    Top = 192
+    Width = 145
+    Height = 17
+    Caption = 'enable Moving/Sizing'
+    Enabled = False
+    TabOrder = 15
+    OnClick = CB_EnableMovingSizingClick
+  end
+  object GBDataSource: TGroupBox
+    Left = 8
+    Top = 120
+    Width = 601
+    Height = 41
+    Caption = 'Data-Source :'
+    TabOrder = 16
+    object RBDataSource_Spectra: TRadioButton
+      Left = 8
+      Top = 16
+      Width = 185
+      Height = 17
+      Caption = 'Spectra (OMICRON EA125)'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+      OnClick = RBDataSource_SpectraClick
+    end
+    object RBDataSource_Phoibos: TRadioButton
+      Left = 296
+      Top = 16
+      Width = 137
+      Height = 17
+      Caption = 'PHOIBOS (XY-File)'
+      TabOrder = 1
+      OnClick = RBDataSource_PhoibosClick
+    end
+    object RBDataSource_PhoibosXML: TRadioButton
+      Left = 448
+      Top = 16
+      Width = 145
+      Height = 17
+      Caption = 'PHOIBOS (XML-File)'
+      TabOrder = 2
+      OnClick = RBDataSource_PhoibosXMLClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 380
+  end
+  object SaveDialog1: TOpenDialog
+    Left = 424
+  end
+end
